@@ -1,2 +1,6 @@
 # http5122
-FrontEnd
+
+this is the repo for **Front-End Web Development**
+
+basically learn `<JavaScript> `
+
