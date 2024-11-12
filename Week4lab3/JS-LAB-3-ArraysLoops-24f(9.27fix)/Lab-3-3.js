@@ -8,11 +8,16 @@ var total = 0;
 //==== LOGIC ========
 //CHECK FOR ITEMS UNTIL THRESHOLD IS MET.
 
-while(total < 35){
+	while(total < 35){
+
 	//GET ITEM COST FROM USER
-	var itemPrice = prompt("what's the value of your new item?");
-	console.log(itemPrice);
 	
+	itemPrice = prompt("what's the value of your new item?");
+	if (itemPrice === null){
+		alert("Okay, no more items");
+		break;}
+	console.log(itemPrice);
+
 	//CONVERT USER INPUT TO A NUMBER
 	var stringToNum = parseInt(itemPrice);
 	console.log(stringToNum);
@@ -24,11 +29,13 @@ while(total < 35){
 	//PUSH ITEM COST TO CART ARRAY
 	cartPrice.push(stringToNum);
 	console.log(cartPrice);
+	
 }
 	
 //SEND POPUP MESSAGE TO USER
-alert("Your shipping for this order will be free!");
+
+	alert("Your shipping for this order will be free!");
 
 //SEND OUTPUT TO CONSOLE
-console.log("item price: $"+cartPrice.join("|$"));
-alert("total: $"+total);
+	console.log("item price: $"+cartPrice.join("|$"));
+	alert("total: $"+total);
